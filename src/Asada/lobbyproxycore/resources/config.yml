@@ -1,0 +1,86 @@
+#LobbyCore by Asada.
+#Copyright IndoSkuat.
+
+#Use this symbol "§" for Collor Text Format.
+#Use this symbol "•" for Small Text Format.
+
+#Whitelist Proxy, true = Enable, false = Disable.
+#Bypass Whitelist Permission: lobbycore.whitelist.bypass
+Enable-Whitelist: true
+WhitelistReason: "\n\n§cIndo§fSkuat §eis under Maintanance, We prepare for v5.0"
+
+#Only Spesific Ip Address can join this Server
+#transfer = Transfer player to Server, kick = Kick player from Server, false = Disable.
+Enable-SpesficIpConnect: false
+SpesficIpConnect: "127.0.0.1"
+#Type ip server where do player to transfer
+IpTransferServer: "mc.indoskuat.net"
+PortTransferServer: 19132
+#Use {player} to show Player Name.
+TransferReason: "§d{player} §ctry to join this Server without Proxy, do Auto Transfer to Proxy Server"
+#Type kick reason
+ReasonKick: "\n\n§bYOU MUST JOIN TO OFFICIAL SERVER\n§eIP: §fmc.indoskuat.net\n§ePort: §f19132§r"
+
+#Use {player} to show Player Name.
+#Player Join Message, true = Enable, false = Disable.
+Enable-JoinMessage: true
+#Owner Join Message, type "" to disable.
+JoinMessage-Owner: "§7[§cOwner§7] §d{player} §ehas joined the Game"
+#Staff Join Message, type "" to disable.
+JoinMessage-Staff: "§7[§bStaff§7] §d{player} §ehas joined the Game"
+#Player Join Message, type ""  to disable.
+JoinMessage: "§d{player} §ehas joined the Game"
+
+#Use {player} to show Player Name.
+#Welcome Message When Player Join to Server, true = Enable, false = Disable.
+Enable-WelcomeMessage: true
+WelcomeMessage: "‏‏‎‏‏‎‎‎§eHi §d{player} §eWelcome to §fIndo§cSkuat"
+
+#Add Title When Player Join to Server, true = Enable, false = Disable.
+Enable-JoinTitle: true
+JoinTitle: "\n§eWelcome To\n§fIndo§cSkuat"
+
+#Change Log UI
+Change-Log: "§l§bv5.0§r\n§710/10/2020\n   §7- §o§6New §fSurvival Season 5\n   §7- §o§6New §fSkyBlock Season 1\n   §7- §o§6New §fOneBlock Server\n   §7- §o§6New §fMain Lobby Map\n   §7- §o§6New §fSurvival Lobby Map\n   §7- §o§6New §fSkyBlock Lobby Map\n   §7- §o§6Improvement §fGameplay\n   §7- §o§6Fixed §fMajor Bugs\n   §7- §o§6Added §fMany Features\n   §7- §o§6Big Update §f\n\n"
+
+#Show Totem Effect When Player Join to Server, true = Enable, false = Disable.
+Enable-TotemEffect: true
+
+#Force Teleport to Spawn when Player join to Server, true = Enable, false = Disable.
+ForceSpawn: true
+
+#Reset Health when Player join to Server, true = Enable, false = Disable.
+ResetHealth: true
+
+#Reset Food when Player join to Server, true = Enable, false = Disable.
+ResetFood: true
+
+#Disable Hunger, Type true = Disable, false = Enable.
+DisableHunger: true
+
+#Death Message, dont fill it if youu want to disable.
+DeathMessage: ""
+
+#Disable PVP, true = Disable, false = Enable.
+DisablePVP: true
+
+#Disable Player Damage, true = Disable, false = Enable.
+DisableDamage: true
+
+#Anti Void, true = Enable, false = Disable.
+AntiVoid: true
+
+#Disable Player Drop Item, true = Disable, false = Enable.
+DisableDropItem:  true
+
+#Disable Player Pickup Item, true = Disable, false = Enable.
+DisablePlayerPickupItem: true
+
+#Break Block, true = Enable, false = Disable.
+PlaceBlock: false
+
+#Break Block, true = Enable, false = Disable.
+BreakBlock: false
+
+#Delete player skin data after quit
+DeleteSkinAfterQuitting: true
