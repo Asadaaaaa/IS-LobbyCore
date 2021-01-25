@@ -20,6 +20,15 @@ class Main extends PluginBase implements Listener{
 	
 	private $lobbyForm;
 	
+	public $particle1 = [];
+	public $particle2 = [];
+	public $particle3 = [];
+	public $particle4 = [];
+	public $particle5 = [];
+	public $particle6 = [];
+	public $particle7 = [];
+	public $particle8 = [];
+	
 	public static function getInstance(): Main {
         return self::$instance;
     }

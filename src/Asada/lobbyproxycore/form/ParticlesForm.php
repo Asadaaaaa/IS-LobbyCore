@@ -30,22 +30,22 @@ class ParticlesForm {
 				case 1:
 				$name = $player->getName();
 				$particles = new SessionParticle(Main::getInstance());
-				if(in_array($name, $particles->particle1)){
-					unset($particles->particle1[array_search($name, $particles->particle1)]);
-				}elseif (in_array($name, $particles->particle2)){
-					unset($particles->particle2[array_search($name, $particles->particle2)]);
-				}elseif (in_array($name, $particles->particle3)){
-					unset($particles->particle3[array_search($name, $particles->particle3)]);
-				}elseif (in_array($name, $particles->particle4)){
-					unset($particles->particle4[array_search($name, $particles->particle4)]);
-				}elseif (in_array($name, $particles->particle5)){
-					unset($particles->particle5[array_search($name, $particles->particle5)]);
-				}elseif (in_array($name, $particles->particle6)){
-					unset($particles->particle6[array_search($name, $particles->particle6)]);
-				}elseif (in_array($name, $particles->particle7)){
-					unset($particles->particle7[array_search($name, $particles->particle7)]);
-				}elseif (in_array($name, $particles->particle8)){
-				unset($particles->particle8[array_search($name, $particles->particle8)]);
+				if(in_array($name, $this->main->particle1)){
+					unset($this->main->particle1[array_search($name, $this->main->particle1)]);
+				}elseif (in_array($name, $this->main->particle2)){
+					unset($this->main->particle2[array_search($name, $this->main->particle2)]);
+				}elseif (in_array($name, $this->main->particle3)){
+					unset($this->main->particle3[array_search($name, $this->main->particle3)]);
+				}elseif (in_array($name, $this->main->particle4)){
+					unset($this->main->particle4[array_search($name, $this->main->particle4)]);
+				}elseif (in_array($name, $this->main->particle5)){
+					unset($this->main->particle5[array_search($name, $this->main->particle5)]);
+				}elseif (in_array($name, $this->main->particle6)){
+					unset($this->main->particle6[array_search($name, $this->main->particle6)]);
+				}elseif (in_array($name, $this->main->particle7)){
+					unset($this->main->particle7[array_search($name, $this->main->particle7)]);
+				}elseif (in_array($name, $this->main->particle8)){
+				unset($this->main->particle8[array_search($name, $this->main->particle8)]);
 				}
 				break;
 			}
@@ -68,54 +68,54 @@ class ParticlesForm {
 			switch($result) {
 				case 0:
 				if($player->hasPermission("particles.wing.iskuat")){
-					if(!in_array($name, $particles->particle8)){
-						$particles->particle8[] = $name;
+					if(!in_array($name, $this->main->particle8)){
+						$this->main->particle8[] = $name;
 						$player->sendMessage("§l§7[§cI§fS§7]§r§aParticles §eActive §6>§b> §l§7[§bWing§7] §l§cIndo§fSkuat§r");
-						if(in_array($name, $particles->particle1)){
-							unset($particles->particle1[array_search($name, $particles->particle1)]);
-						}elseif (in_array($name, $particles->particle3)){
-						    unset($particles->particle3[array_search($name, $particles->particle3)]);
-						}elseif (in_array($name, $particles->particle4)){
-							unset($particles->particle4[array_search($name, $particles->particle4)]);
-						}elseif (in_array($name, $particles->particle2)){
-							unset($particles->particle2[array_search($name, $particles->particle2)]);
-						}elseif (in_array($name, $particles->particle5)){
-							unset($particles->particle5[array_search($name, $particles->particle5)]);
-						}elseif (in_array($name, $particles->particle6)){
-							unset($particles->particle6[array_search($name, $particles->particle6)]);
-						}elseif (in_array($name, $particles->particle7)){
-							unset($particles->particle7[array_search($name, $particles->particle7)]);
+						if(in_array($name, $this->main->particle1)){
+							unset($this->main->particle1[array_search($name, $this->main->particle1)]);
+						}elseif (in_array($name, $this->main->particle3)){
+						    unset($this->main->particle3[array_search($name, $this->main->particle3)]);
+						}elseif (in_array($name, $this->main->particle4)){
+							unset($this->main->particle4[array_search($name, $this->main->particle4)]);
+						}elseif (in_array($name, $this->main->particle2)){
+							unset($this->main->particle2[array_search($name, $this->main->particle2)]);
+						}elseif (in_array($name, $this->main->particle5)){
+							unset($this->main->particle5[array_search($name, $this->main->particle5)]);
+						}elseif (in_array($name, $this->main->particle6)){
+							unset($this->main->particle6[array_search($name, $this->main->particle6)]);
+						}elseif (in_array($name, $this->main->particle7)){
+							unset($this->main->particle7[array_search($name, $this->main->particle7)]);
 						}
 					} else {
-						unset($particles->particle8[array_search($name, $particles->particle8)]);
+						unset($this->main->particle8[array_search($name, $this->main->particle8)]);
 						$player->sendMessage("§l§7[§cI§fS§7]§r§aParticles  §6>§b> §fMenghilangkan Particle: §l§7[§bWing§7] §l§cIndo§fSkuat§r");
 					}
 				} else {
-					$particles->particleForm($player, "\n§cKamu tidak memiliki izin, Particle:\n§l§7[§bWing§7] §l§cIndo§fSkuat§r");
+					$this->main->particleForm($player, "\n§cKamu tidak memiliki izin, Particle:\n§l§7[§bWing§7] §l§cIndo§fSkuat§r");
 				}
 				break;
 				
 				case 1:
-					if(!in_array($name, $particles->particle2)){
-						$particles->particle2[] = $name;
+					if(!in_array($name, $this->main->particle2)){
+						$this->main->particle2[] = $name;
 						$player->sendMessage("§l§7[§cI§fS§7]§r§aParticles  §6>§b> §fMenghidupkan Particle: §l§7[§bCircle§7]§r §9Splash§r");
-						if(in_array($name, $particles->particle1)){
-							unset($particles->particle1[array_search($name, $particles->particle1)]);
-						}elseif (in_array($name, $particles->particle3)){
-						    unset($particles->particle3[array_search($name, $particles->particle3)]);
-						}elseif (in_array($name, $particles->particle4)){
-							unset($particles->particle4[array_search($name, $particles->particle4)]);
-						}elseif (in_array($name, $particles->particle5)){
-							unset($particles->particle5[array_search($name, $particles->particle5)]);
-						}elseif (in_array($name, $particles->particle6)){
-							unset($particles->particle6[array_search($name, $particles->particle6)]);
-						}elseif (in_array($name, $particles->particle7)){
-							unset($particles->particle7[array_search($name, $particles->particle7)]);
-						}elseif (in_array($name, $particles->particle8)){
-							unset($particles->particle8[array_search($name, $particles->particle8)]);
+						if(in_array($name, $this->main->particle1)){
+							unset($this->main->particle1[array_search($name, $this->main->particle1)]);
+						}elseif (in_array($name, $this->main->particle3)){
+						    unset($this->main->particle3[array_search($name, $this->main->particle3)]);
+						}elseif (in_array($name, $this->main->particle4)){
+							unset($this->main->particle4[array_search($name, $this->main->particle4)]);
+						}elseif (in_array($name, $this->main->particle5)){
+							unset($this->main->particle5[array_search($name, $this->main->particle5)]);
+						}elseif (in_array($name, $this->main->particle6)){
+							unset($this->main->particle6[array_search($name, $this->main->particle6)]);
+						}elseif (in_array($name, $this->main->particle7)){
+							unset($this->main->particle7[array_search($name, $this->main->particle7)]);
+						}elseif (in_array($name, $this->main->particle8)){
+							unset($this->main->particle8[array_search($name, $this->main->particle8)]);
 						}
 					} else {
-						unset($particles->particle2[array_search($name, $particles->particle2)]);
+						unset($this->main->particle2[array_search($name, $this->main->particle2)]);
 						$player->sendMessage("§l§7[§cI§fS§7]§r§aParticles  §6>§b> §fMenghilangkan Particle: §l§7[§bCircle§7]§r §9Splash§r");
 					}
 				break;

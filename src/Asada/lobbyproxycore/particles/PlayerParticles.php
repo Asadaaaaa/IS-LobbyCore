@@ -13,7 +13,7 @@ use pocketmine\level\Level;
 use pocketmine\level\Position;
 
 use Asada\lobbyproxycore\Main;
-use Asada\lobbyproxycore\particles\SessionParticle;
+use Asada\lobbyproxycore\form\ParticlesForm;
 
 class PlayerParticles extends Task {
 	
@@ -22,13 +22,13 @@ class PlayerParticles extends Task {
 	}
 	
 	public function onRun($task){
-		$particles = new SessionParticle(Main::getInstance());
+		$particles = new ParticlesForm(Main::getInstance());
 		foreach($this->plugin->getServer()->getOnlinePlayers() as $pl){
 			$name = $pl->getPlayer()->getName();
 			$level = $pl->getLevel();
 			$player = $pl->getPlayer();
 			$players = $player->getLevel()->getPlayers();
-			if(in_array($name, $particles->particle1)){
+			if(in_array($name, $this->plugin->particle1)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -40,7 +40,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new FlameParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle2)){
+			if(in_array($name, $this->plugin->particle2)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -52,7 +52,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new SplashParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle3)){
+			if(in_array($name, $this->plugin->particle3)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -64,7 +64,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new HeartParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle4)){
+			if(in_array($name, $this->plugin->particle4)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -76,7 +76,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new PortalParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle5)){
+			if(in_array($name, $this->plugin->particle5)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -88,7 +88,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new LavaParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle6)){
+			if(in_array($name, $this->plugin->particle6)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -100,7 +100,7 @@ class PlayerParticles extends Task {
 					$level->addParticle(new AngryVillagerParticle(new Vector3($x, $y + 1.5, $z))); 
 				}
 			}
-			if(in_array($name, $particles->particle7)) {
+			if(in_array($name, $this->plugin->particle7)) {
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();
@@ -116,7 +116,7 @@ class PlayerParticles extends Task {
 	                $level->addParticle($particle);
 				}
 	        }
-			if(in_array($name, $particles->particle8)){
+			if(in_array($name, $this->plugin->particle8)){
 				$x = $player->getX();
 				$y = $player->getY();
 				$z = $player->getZ();

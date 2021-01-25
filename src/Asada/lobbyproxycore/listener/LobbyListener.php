@@ -133,23 +133,22 @@ class LobbyListener implements Listener {
         }
 		
 		//* Clear Particles Player
-		$particles = new SessionParticle(Main::getInstance());
-		if(in_array($name, $particles->particle1)){
-			unset($particles->particle1[array_search($name, $particles->particle1)]);
-		}elseif (in_array($name, $particles->particle2)){
-			unset($particles->particle2[array_search($name, $particles->particle2)]);
-		}elseif (in_array($name, $particles->particle3)){
-			unset($particles->particle3[array_search($name, $particles->particle3)]);
-		}elseif (in_array($name, $particles->particle4)){
-			unset($particles->particle4[array_search($name, $particles->particle4)]);
-		}elseif (in_array($name, $particles->particle5)){
-			unset($particles->particle5[array_search($name, $particles->particle5)]);
-		}elseif (in_array($name, $particles->particle6)){
-			unset($particles->particle6[array_search($name, $particles->particle6)]);
-		}elseif (in_array($name, $particles->particle7)){
-			unset($particles->particle7[array_search($name, $particles->particle7)]);
-		}elseif (in_array($name, $particles->particle8)){
-			unset($particles->particle8[array_search($name, $particles->particle8)]);
+		if(in_array($name, $this->main->particle1)){
+			unset($this->main->particle1[array_search($name, $this->main->particle1)]);
+		}elseif (in_array($name, $this->main->particle2)){
+			unset($this->main->particle2[array_search($name, $this->main->particle2)]);
+		}elseif (in_array($name, $this->main->particle3)){
+			unset($this->main->particle3[array_search($name, $this->main->particle3)]);
+		}elseif (in_array($name, $this->main->particle4)){
+			unset($this->main->particle4[array_search($name, $this->main->particle4)]);
+		}elseif (in_array($name, $this->main->particle5)){
+			unset($this->main->particle5[array_search($name, $this->main->particle5)]);
+		}elseif (in_array($name, $this->main->particle6)){
+			unset($this->main->particle6[array_search($name, $this->main->particle6)]);
+		}elseif (in_array($name, $this->main->particle7)){
+			unset($this->main->particle7[array_search($name, $this->main->particle7)]);
+		}elseif (in_array($name, $this->main->particle8)){
+			unset($this->main->particle8[array_search($name, $this->main->particle8)]);
 		}
     }
 	
